@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOSWebBridgeDemo</title>
+</head>
+<body>
+    <h1>iOSWebBridgeDemo</h1>
+    <button id="test">Test</button>
+    <script>
+        document.getElementById('test').addEventListener('click', function() {
+            window.webkit.messageHandlers.buttonClicked.postMessage('Botón clickeado');
+        });
+    </script>
+</body>
+</html>
